@@ -14,7 +14,7 @@ router.post("/api/workouts", ({ body }, res) => {
 
 
 router.put("/api/workouts/:id", ({ body, params }, res) => {
-    Workout.findOneandUpdate(params.id, {$push: { exercises: body}}, {new: true})
+    Workout.findByIdAndUpdate(params.id, {$push: { exercises: body}}, {new: true})
         .then(dbWorkout => {
         res.json(dbWorkout);
         })
@@ -25,7 +25,7 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 
 router.get("/api/workouts/range", (req, res) => { 
     var d = new Date();
-    d.setDate(d.getDate()-7);
+    d.setDate(d.getDate()-10);
 
     Workout.aggregate([
         { $match: { 'day' : {$gt: d}}},
