@@ -26,10 +26,10 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 
 router.get("/api/workouts/range", ({params}, res) => { 
     var d = new Date();
-    // d.setDate(d.getDate()-10);
+    d.setDate(d.getDate()-10);
     db.Workout.aggregate([
         { 
-            $match: { 'day' : {$lte: d}},
+            $match: { 'day' : {$gte: d}},
         },    
         {
             $addFields:{
