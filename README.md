@@ -18,7 +18,7 @@ This NoSQL, Mongo and Mongoose based project that allows a user to view, create,
 Download or clone this repository. Install the required dependencies (For example, "npm install"). Run the file by typing "npm start" into your terminal.
 
 ### Usage Guide <a name="usage"></a>
-Answer the questions and prompts accordingly and a database will be updated with the information input.
+Check the deployed application here: https://fitness-tracker-skc.herokuapp.com/. Once there, you'll be able to view, create, and track daily workouts.
 
 ### How to Contribute <a name="contribution"></a>
 If you'd like to contribute please send an email to SKCHUNG93@Gmail.com or message me on github.
